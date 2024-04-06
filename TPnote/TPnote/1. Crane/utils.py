@@ -18,10 +18,12 @@ def plot_marker_movement(filename):
 
     timestamps = [i for i in range(len(lines))]  # Create timestamps for each line
     marker_data = {f"m{i + 1}": {'x': [], 'y': []} for i in range(3)}  # Initialize marker data
+    markers_valid = []  # List to store MarkersValid values
 
     # Extract marker coordinates and update marker data
     for line in lines:
         marker_coordinates = extract_marker_coordinates(line)
+        markers_valid.append(re.search(r'MarkersValid:\s*(\w+)', line).group(1))  # Extract MarkersValid value
         for i, (x, y) in enumerate(marker_coordinates):
             marker_data[f"m{i + 1}"]['x'].append(x)
             marker_data[f"m{i + 1}"]['y'].append(y)
@@ -42,7 +44,7 @@ def plot_marker_movement(filename):
         for marker, data in marker_data.items():
             ax.plot(data['x'][line_index], data['y'][line_index], marker='o', linestyle='-', label=marker)
         ax.legend()
-        ax.set_title(f"Movement des Marqueurs - {filename} - Line {line_index + 1}")
+        ax.set_title(f"Movement des Marqueurs - {filename} - Line {line_index + 1}, MarkersValid: {markers_valid[line_index]}")
 
     slider.on_changed(update)
 
@@ -50,9 +52,6 @@ def plot_marker_movement(filename):
         slider.set_val(frame)
 
     # Animate the graph using FuncAnimation with a faster interval (100 milliseconds)
-    anim = FuncAnimation(fig, animate_graph, frames=len(lines), interval=100)
+    anim = FuncAnimation(fig, animate_graph, frames=len(lines), interval=500)
 
     plt.show()
-
-# Visualisation des marqueurs et de leur mouvement pour le fichier "LpsData_STS405b.txt"
-plot_marker_movement("LpsData_STS405b.txt")
