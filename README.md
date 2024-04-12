@@ -16,12 +16,13 @@ Dans le but d'améliorer le modéles, plusieurs features sont mise en place:
     -   Calcule de la surface du trinagle: Variable ajouté sans observation précise, remarqué.
 
 ## Affichage de la matrice de correlation
-    - **LpsData_STS405b :**
+   -  LpsData_STS405b :
         -   Il y a une forte correlation entre TrolleyPos et les position sur l'axe y de m1,m2 et m3 avec une valeurs de -0.89
         -   La position des marques  selon l'axe x et y est fortement corrélé  (m1_x foretemnt corrélé avec m1_y)
         -   TrolleyPos est moyennement corrélé avec MarkersValid
         -   Les vitesses des marque présente une correlation moyenne entre eux avec des valeurs avoisinent 0.5
-    - **LpsData_TILsts :**
+
+    - LpsData_TILsts :
         -   TrolleyPos est moyennement corrélé avec Hoistpos, et ne présenta pas de corrélation avec MarkersValid
         -   Les vitesses des marque présente une correlation forte entre eux avec des valeurs avoisinent 0.9
         -   La supérficie du tringle formé par les marquers est moyennement corélé avec les vitesses
@@ -35,11 +36,13 @@ Dans le but d'améliorer le modéles, plusieurs features sont mise en place:
         - Random Forest: Accuracy - 0.969
         - Support Vector Machine: Accuracy - 0.948
         - Gradient Boosting Classifier: Accuracy - 0.952
+
     - with speed
         - Logistic Regression: Accuracy - 0.948
         - Random Forest: Accuracy - 0.921
         - Support Vector Machine: Accuracy - 0.948
         - Gradient Boosting Classifier: Accuracy - 0.930
+
     - All feature
         - Logistic Regression: Accuracy - 0.948
         - Random Forest: Accuracy - 0.939
@@ -52,11 +55,13 @@ Dans le but d'améliorer le modéles, plusieurs features sont mise en place:
         - Random Forest: Accuracy - 0.889
         - Support Vector Machine: Accuracy - 0.749
         - Gradient Boosting Classifier: Accuracy - 0.815
+
     - with speed
         - Logistic Regression: Accuracy - 0.749
         - Random Forest: Accuracy - 0.739
         - Support Vector Machine: Accuracy - 0.749
         - Gradient Boosting Classifier: Accuracy - 0.736
+
     - All feature
         - Logistic Regression: Accuracy - 0.761
         - Random Forest: Accuracy - 0.815
@@ -89,6 +94,20 @@ En conclusion, les modèles Random Forest et Gradient Boosting ont tendance à m
 
 
 # EXO2
+
+Durant cette exercice nous allons effectué une analyse des packets réseau.
+
+## Carectéristic du trafic
+En premier lieu nous allons analyser les packets dans WireShark afin d'identifier les caractéristique des deux fichiers.
+
+## Extraction des caractéristique avec python
+   -  Information de chaque packets
+   -  Information sur les sessions
+
+## Clustering
+
+## Détection d'anomalie
+
 
 
 
@@ -140,7 +159,9 @@ Nous allons réalisé une étude d'identification des sentiments des revues sur 
       Dans l'ensemble, basé uniquement sur la précision, les modèles de régression logistique avec la vectorisation Bag-of-Words et les caractéristiques de bigramme semblent être le meilleur choix parmi les modèles testés. 
 
    -  Features
+      
       -  ['Word_Count', 'Review_Length']
+
          | Model              | Accuracy |
          |--------------------|----------|
          | Logistic Regression| 0.55     |
@@ -150,6 +171,7 @@ Nous allons réalisé une étude d'identification des sentiments des revues sur 
          À partir des résultats fournis, il est évident que le modèle de régression logistique a mieux performé parmi les modèles testés, avec une précision de 0.55. Le modèle SVM a atteint une précision de 0.51, tandis que le modèle de Forêt Aléatoire a eu la plus faible précision de 0.47.
          
       -  ['Word_Count', 'Review_Length', 'Uppercase_Count']
+      
       | Modèle              | Précision |
       |---------------------|-----------|
       | Régression Logistique | 0.55      |
@@ -159,6 +181,7 @@ Nous allons réalisé une étude d'identification des sentiments des revues sur 
       Les résultats restent similaires à ceux précédemment analysés, avec la régression logistique ayant la meilleure performance, suivie du SVM, puis de la forêt aléatoire.
 
       -  ['Word_Count', 'Review_Length', 'Has_Not']
+
       | Modèle              | Précision |
       |---------------------|-----------|
       | Régression Logistique | 0.58      |
@@ -285,8 +308,4 @@ Les varible qui n'aposte rien sont : "SEX","COPD","ASTHMA","INMSUPR", "OTHER_DIS
 
    
 Dans l'ensemble, tous les modèles ont obtenu des précisions similaires, allant d'environ 93,37 % à 93,39 %. Cela suggère que le choix de l'ensemble de fonctionnalités n'a pas d'impact significatif sur les performances des modèles. Cependant, il est important de noter que les précisions sont relativement élevées, ce qui indique que les modèles se comportent bien dans la prédiction de la variable cible.
-
-
-
-
 
