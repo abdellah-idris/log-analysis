@@ -1,19 +1,18 @@
 # Rapport Test et Vérification
 
 # 1. Crane
-Durant cette exercice nous allons analysé des fichiers representant la postion de différents marquers.
+Durant cette exercice nous allons analysé des fichiers représentant la position de différents marquers.
 
 ## EDA
-On anylisant les deux fichiers on remraque que le nombre de valeur de MarkersValid a False est significativement plus petit que les valeurs a True.
+On anylisant les deux fichiers on remarque que le nombre de valeur de MarkersValid a False est significativement plus petit que les valeurs a True.
 
 ![img](<TPnote/TPnote/1. Crane/images/LpsData_TILsts_Count of MarkersValid_Values.png>)
 ![img](<TPnote/TPnote/1. Crane/images/sts405_count_MarkesrsValid.png>)
 
 ## Observation des marqueurs:
-On visualisant les changement de position des 3 marquers, on remarque la présence d'une modification brusque et subite de la postion d'un ou plusieurs marquers. la forme tirnagulaire ne persiste plus vraiment a certain moment.
+On visualisant les changement de position des 3 marquers, on remarque la présence d'une modification brusque et subite de la position d'un ou plusieurs marquers. la forme triangulaire ne persiste plus vraiment a certain moment.
 
-Si la vidéo ne marche pas vous y avait accées dans le dossier video sous le nom de tracker.mp4 
-
+la vidéo est disponible dans le fichier README.html
 
 <video width="320" height="240" controls>
   <source src="TPnote/TPnote/1. Crane/video/tracker.mp4" type="video/mp4">
@@ -21,16 +20,16 @@ Si la vidéo ne marche pas vous y avait accées dans le dossier video sous le no
 
 ## Features
 Dans le but d'améliorer le modéles, plusieurs features sont mise en place:
-    -   **Vitesse des marqueurs**: la vittesse est calculé selon la formule de la distance, on peut supposer que les déplacements a des vitesses différentes des différent marquers permetrra didentifier des logs erroné.
+    -   **Vitesse des marqueurs**: la vittesse est calculée selon la formule de la distance. On peut supposer que les déplacements à des vitesses différentes des différents marqueurs permettront d'identifier des logs erronés.
     -   **Déplacement des marqueurs** selon l'axe x et y : On réalise une soustraction entre m1[i] et m1[i+1] sur l'axe x et y afin d'avoir l'information sur le taux de dépalacement. 
     -   Calcule de la **surface du trinagle**: Variable ajouté sans observation précise, remarqué.
 
 ## Affichage de la matrice de correlation
    -  LpsData_STS405b :
-        -   Il y a une forte correlation entre TrolleyPos et les position sur l'axe y de m1,m2 et m3 avec une valeurs de -0.89
+        -   Il y a une forte corrélation entre TrolleyPos et les positions sur l'axe y de m1, m2 et m3 avec une valeur de -0.89
         -   La position des marqueurs  selon l'axe x et y est fortement corrélé  (m1_x foretemnt corrélé avec m1_y)
         -   TrolleyPos est moyennement corrélé avec MarkersValid
-        -   Les vitesses des marqueurs présente une correlation moyenne entre eux avec des valeurs avoisinent 0.5
+        -   Les vitesses des marqueurs présentent une correlation moyenne entre eux avec des valeurs avoisinent 0.5
 
       ![img](<TPnote/TPnote/1. Crane/images/correlation_matrix_df_LpsData_STS405b.png>)
 
@@ -38,7 +37,7 @@ Dans le but d'améliorer le modéles, plusieurs features sont mise en place:
    - LpsData_TILsts :
         -   TrolleyPos est moyennement corrélé avec Hoistpos, et ne présenta pas de corrélation avec MarkersValid
         -   Les vitesses des marqueurs présente une correlation forte entre eux avec des valeurs avoisinent 0.9
-        -   La supérficie du tringle formé par les marqueurs est moyennement corélé avec les vitesses
+        -   La superficie du tringle formé par les marqueurs est moyennement corélé avec les vitesses
         -   La position des marqueurs  selon l'axe x et y est moyennement corrélé  (m1_x moyennement corrélé avec m1_y)
 
       ![img](<TPnote/TPnote/1. Crane/images/Correlation Heatmap df_LpsData_TILsts.png>)     
@@ -150,7 +149,7 @@ En premier lieu nous allons analyser les packets dans WireShark afin d'identifie
          ![img](<TPnote/TPnote/2. Traffic réseau/images/session/cluster3.png>)
          ![img](<TPnote/TPnote/2. Traffic réseau/images/session/cluster4.png>)
    
-   Avec le Clustering, on remarque la separation des différentes classe pour l'esnsembles des variables utilisées.
+   Avec le Clustering, on remarque la separation des différentes classe pour l'ensemble des variables utilisées.
    
 
 ## Détection d'anomalie
@@ -231,7 +230,7 @@ Nous allons réalisé une étude d'identification des sentiments des revues sur 
 ## EDA
    En analysant le fichier le nombre de review positive et négative est le meme 500 pour chaque.
 
-   Plusieurs features seront ajoutés afin d'améliorer les predictions des modéles.
+   Plusieurs features seront ajoutés afin d'améliorer les predictions des modèles.
 
    - 1. **Taille des reviews** : D'après le diagramme en boîte, la longueur moyenne des commentaires Disliked se situe entre 30 et 80 caractères, pour les commentaire liked entre 30 et 70. Il y a plus de variabilité dans la longueur des commentaires liked que dans les commentaires Disliked. On peut également constater que les commentaires Disliked semble plus long.
 
@@ -360,9 +359,9 @@ La régression logistique s'est avérée être le choix le plus fiable parmi les
 
 # 4. Covid
 
-Dans ce derniere exercice nous allons travailler sur un DataSet du covid 19.
+Dans ce dernier exercice nous allons travailler sur un DataSet du covid 19.
 
-Le jeu de données brut contient un vaste nombre d'informations relatives aux patients anonymisés, y compris les préconditions. Le jeu de données brut comprend 21 caractéristiques différentes et 1 048 576 patients uniques. Dans les caractéristiques booléennes, 1 signifie "oui" et 2 signifie "non". Les valeurs 97 et 99 sont des données manquantes.
+Le jeu de données brut contient un grand nombre d'informations relatives aux patients anonymisés, y compris les préconditions. Le jeu de données brut comprend 21 caractéristiques différentes et 1 048 576 patients uniques. Dans les caractéristiques booléennes, 1 signifie "oui" et 2 signifie "non". Les valeurs 97 et 99 sont des données manquantes.
 
 | Feature                         | Description (French)                                                                                     |
 |--------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -389,7 +388,7 @@ Le jeu de données brut contient un vaste nombre d'informations relatives aux pa
 
 
 ## Traitement des données
-Nous allons commencé par traité les données manquentes ainsi que la création d'une colonne a prédire "DEAD".
+Nous allons commencé par traiter les données manquentes ainsi que la création d'une colonne a prédire "DEAD".
 
 -  **Données Manquantes**
    -  On va commencé par voir les valeurs uniques de chaque colonne. 
@@ -422,7 +421,7 @@ Nous allons analyser nos données grace des graphe de distribution.
 
 
 ## Modelisation.
-On commencera par analyser la matrice de confusion, afin d'obtenir les variables les plus snignificatif.
+On commencera par analyser la matrice de confusion, afin d'obtenir les variables les plus significatif.
 Les varible qui n'aposte rien sont : "SEX","COPD","ASTHMA","INMSUPR", "OTHER_DISEASE","CARDIOVASCULAR","OBESITY","TOBACCO".
 
 
