@@ -1,0 +1,885 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\idris\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="rapport-test-et-vérification">Rapport Test et Vérification </h1>
+<h1 id="1-crane">1. Crane </h1>
+<p>Durant cette exercice nous allons analysé des fichiers representant la postion de différents marquers.</p>
+<h2 id="eda">EDA </h2>
+<p>On anylisant les deux fichiers on remraque que le nombre de valeur de MarkersValid a False est significativement plus petit que les valeurs a True.</p>
+<p><img src="TPnote/TPnote/1.%20Crane/images/LpsData_TILsts_Count%20of%20MarkersValid_Values.png" alt="img"><br>
+<img src="TPnote/TPnote/1.%20Crane/images/sts405_count_MarkesrsValid.png" alt="img"></p>
+<h2 id="observation-des-marqueurs">Observation des marqueurs: </h2>
+<p>On visualisant les changement de position des 3 marquers, on remarque la présence d'une modification brusque et subite de la postion d'un ou plusieurs marquers. la forme tirnagulaire ne persiste plus vraiment a certain moment.</p>
+<p>Si la vidéo ne marche pas vous y avait accées dans le dossier video sous le nom de tracker.mp4</p>
+<video width="320" height="240" controls="">
+  <source src="TPnote/TPnote/1. Crane/video/tracker.mp4" type="video/mp4">
+</video>
+<h2 id="features">Features </h2>
+<p>Dans le but d'améliorer le modéles, plusieurs features sont mise en place:<br>
+-   <strong>Vitesse des marqueurs</strong>: la vittesse est calculé selon la formule de la distance, on peut supposer que les déplacements a des vitesses différentes des différent marquers permetrra didentifier des logs erroné.<br>
+-   <strong>Déplacement des marqueurs</strong> selon l'axe x et y : On réalise une soustraction entre m1[i] et m1[i+1] sur l'axe x et y afin d'avoir l'information sur le taux de dépalacement.<br>
+-   Calcule de la <strong>surface du trinagle</strong>: Variable ajouté sans observation précise, remarqué.</p>
+<h2 id="affichage-de-la-matrice-de-correlation">Affichage de la matrice de correlation </h2>
+<ul>
+<li>
+<p>LpsData_STS405b :</p>
+<ul>
+<li>Il y a une forte correlation entre TrolleyPos et les position sur l'axe y de m1,m2 et m3 avec une valeurs de -0.89</li>
+<li>La position des marqueurs  selon l'axe x et y est fortement corrélé  (m1_x foretemnt corrélé avec m1_y)</li>
+<li>TrolleyPos est moyennement corrélé avec MarkersValid</li>
+<li>Les vitesses des marqueurs présente une correlation moyenne entre eux avec des valeurs avoisinent 0.5</li>
+</ul>
+<p><img src="TPnote/TPnote/1.%20Crane/images/correlation_matrix_df_LpsData_STS405b.png" alt="img"></p>
+</li>
+<li>
+<p>LpsData_TILsts :</p>
+<ul>
+<li>TrolleyPos est moyennement corrélé avec Hoistpos, et ne présenta pas de corrélation avec MarkersValid</li>
+<li>Les vitesses des marqueurs présente une correlation forte entre eux avec des valeurs avoisinent 0.9</li>
+<li>La supérficie du tringle formé par les marqueurs est moyennement corélé avec les vitesses</li>
+<li>La position des marqueurs  selon l'axe x et y est moyennement corrélé  (m1_x moyennement corrélé avec m1_y)</li>
+</ul>
+<p><img src="TPnote/TPnote/1.%20Crane/images/Correlation%20Heatmap%20df_LpsData_TILsts.png" alt="img"></p>
+</li>
+</ul>
+<h2 id="détection-des-erreurs--résultats">Détection des erreurs : Résultats </h2>
+<ul>
+<li>
+<p><strong>LpsData_TILsts :</strong></p>
+<ul>
+<li>
+<p>without speed</p>
+<ul>
+<li>Logistic Regression: Accuracy - 0.948</li>
+<li>Random Forest: Accuracy - 0.969</li>
+<li>Support Vector Machine: Accuracy - 0.948</li>
+<li>Gradient Boosting Classifier: Accuracy - 0.952</li>
+</ul>
+</li>
+<li>
+<p>with speed</p>
+<ul>
+<li>Logistic Regression: Accuracy - 0.948</li>
+<li>Random Forest: Accuracy - 0.921</li>
+<li>Support Vector Machine: Accuracy - 0.948</li>
+<li>Gradient Boosting Classifier: Accuracy - 0.930</li>
+</ul>
+</li>
+<li>
+<p>All feature</p>
+<ul>
+<li>Logistic Regression: Accuracy - 0.948</li>
+<li>Random Forest: Accuracy - 0.939</li>
+<li>Support Vector Machine: Accuracy - 0.948</li>
+<li>Gradient Boosting Classifier: Accuracy - 0.939</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>LpsData_STS405b :</strong></p>
+<ul>
+<li>
+<p>without speed</p>
+<ul>
+<li>Logistic Regression: Accuracy - 0.744</li>
+<li>Random Forest: Accuracy - 0.889</li>
+<li>Support Vector Machine: Accuracy - 0.749</li>
+<li>Gradient Boosting Classifier: Accuracy - 0.815</li>
+</ul>
+</li>
+<li>
+<p>with speed</p>
+<ul>
+<li>Logistic Regression: Accuracy - 0.749</li>
+<li>Random Forest: Accuracy - 0.739</li>
+<li>Support Vector Machine: Accuracy - 0.749</li>
+<li>Gradient Boosting Classifier: Accuracy - 0.736</li>
+</ul>
+</li>
+<li>
+<p>All feature</p>
+<ul>
+<li>Logistic Regression: Accuracy - 0.761</li>
+<li>Random Forest: Accuracy - 0.815</li>
+<li>Support Vector Machine: Accuracy - 0.749</li>
+<li>Gradient Boosting Classifier: Accuracy - 0.786</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="analyse-des-resultats">Analyse des resultats: </h2>
+<p>En examinant les rapports de classification, nous pouvons observer les performances des divers modèles d'apprentissage automatique entraînés sur nos ensembles de données, avec et sans l'inclusion des différéntes caractéristiques  vitesse, déplacement et surface. Voici ce que nous avons remarqué :</p>
+<p><strong>Régression logistique :</strong></p>
+<p>La régression logistique présente des performances similaires pour les deux ensembles de données, qu'elles contiennent ou non les caractéristiques de vitesse.<br>
+Les résultats montrent une difficulté du modèle à bien classifier les instances de la classe 0 (MarkersValid : False), ce qui se traduit par des scores de précision, de rappel et de F1 relativement faibles pour cette classe.<br>
+En revanche, le modèle se comporte bien dans la classification de la classe 1 (MarkersValid : True), avec des scores de précision, de rappel et de F1 élevés.</p>
+<p><strong>Random Forest :</strong><br>
+Sans les caractéristiques de vitesse, le modèle Random Forest obtient une précision plus élevée que la régression logistique pour les deux ensembles de données.<br>
+L'introduction des caractéristiques de vitesse entraîne une légère baisse de la précision, surtout pour l'ensemble de données LpsData_STS405b.<br>
+Globalement, le modèle Random Forest donne de bons résultats dans la classification des deux classes, avec des scores de précision, de rappel et de F1 relativement élevés pour chacune.</p>
+<p><strong>Machine à vecteurs de support (SVM) :</strong></p>
+<p>Les performances de SVM sont comparables à celles de la régression logistique, montrant des résultats similaires en termes de précision et de mesure de performance.<br>
+Toutefois, comme la régression logistique, SVM éprouve des difficultés à classifier correctement les instances de la classe 0 (MarkersValid : False), ce qui entraîne des scores de précision, de rappel et de F1 plus bas pour cette classe.</p>
+<p><strong>Gradient Boosting Classifier :</strong></p>
+<p>Le Gradient Boosting Classifier se comporte bien en termes de précision, en particulier pour l'ensemble de données LpsData_STS405b.<br>
+Ce modèle affiche une performance équilibrée dans la classification des deux classes, avec des scores de précision, de rappel et de F1 relativement élevés pour chacune.</p>
+<p><strong>Conclusion</strong><br>
+Les modèles Random Forest et Gradient Boosting ont tendance à mieux performer que la régression logistique et SVM en termes de précision et de performance équilibrée sur les deux classes. Cependant, l'ajout des caractéristiques de vitesse n'améliore pas systématiquement les performances de ces modèles, et dans certains cas, cela conduit même à une légère diminution de la précision. Cela suggère que les caractéristiques de vitesse ne fournissent pas nécessairement d'informations supplémentaires significatives pour la tâche de classification.</p>
+<h1 id="2-trafic">2. Trafic </h1>
+<p>Durant cette exercice nous allons effectué une analyse des packets réseau. Dans l'objectif est d'identifier les sessions en erreurs.</p>
+<h2 id="carectéristic-du-trafic">Carectéristic du trafic </h2>
+<p>En premier lieu nous allons analyser les packets dans WireShark afin d'identifier les caractéristique des deux fichiers.</p>
+<ul>
+<li>
+<p>capture 1<br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/capture1.png" alt="alt text"></p>
+</li>
+<li>
+<p>capture 2<br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/capture2.png" alt="alt text"></p>
+</li>
+</ul>
+<p>On remarque que le nombre de packets dans le fichier de capture 2 est  supérieurs au packets de la capture 1. Par contre en moyenne les packets de la capture 1 sont supérieurs en terme de taille.</p>
+<h2 id="extraction-des-caractéristique-avec-python--clustering">Extraction des caractéristique avec python &amp; clustering </h2>
+<ul>
+<li>
+<p><strong>packets</strong></p>
+<ul>
+<li>
+<p><strong>Informations</strong><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/packets/informations.png" alt="img"></p>
+</li>
+<li>
+<p><strong>Clustering</strong><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/packets/cluster1.png" alt="img"><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/packets/cluster2.png" alt="img"><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/packets/cluster3.png" alt="img"><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/packets/cluster4.png" alt="img"></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>sessions</strong></p>
+<ul>
+<li>
+<p><strong>Informations</strong><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/session/informations.png" alt="img"></p>
+</li>
+<li>
+<p><strong>Clustering</strong><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/session/cluster1.png" alt="img"><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/session/cluster2.png" alt="img"><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/session/cluster3.png" alt="img"><br>
+<img src="TPnote/TPnote/2.%20Traffic%20r%C3%A9seau/images/session/cluster4.png" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Avec le Clustering, on remarque la separation des différentes classe pour l'esnsembles des variables utilisées.</p>
+<h2 id="détection-danomalie">Détection d'anomalie </h2>
+<ul>
+<li>
+<p>Afin de reconnaintre les paquets en erreurs nous allons utiliser un filtre "tcp.analysis.flags". Ce dernier permet de récupérer les packets TCP  présenantant des anomalies.</p>
+</li>
+<li>
+<p><strong>Filtre</strong>: ((((((((((((((tls.record.length.invalid) || (dns.retransmit_request)) || (quic.decryption_failed)) || (dns.retransmit_response)) || (dns.retransmit_request)) || (tls.ignored_unknown_record)) || (tcp.analysis.ack_lost_segment)) || (esp.sequence-analysis.wrong-sequence-number)) || (quic.coalesced_padding_data)) || (quic.retransmission)) || (tcp.options.sack_perm.absent)) || (tcp.analysis.duplicate_ack)) || (tcp.connection.syn)) || (http.chat)) || (http.chat)</p>
+</li>
+<li>
+<p>Nous procédent ensuite à la détection des anomalies dans l'ensemble des session.</p>
+</li>
+</ul>
+<h2 id="résulats"><strong>Résulats</strong> </h2>
+<p><strong>Logistic Regression:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>precision</th>
+<th>recall</th>
+<th>f1-score</th>
+<th>support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>536</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1.00</td>
+<td>0.05</td>
+<td>0.10</td>
+<td>19</td>
+</tr>
+<tr>
+<td>-----</td>
+<td>-----------</td>
+<td>--------</td>
+<td>----------</td>
+<td>---------</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td></td>
+<td></td>
+<td>0.97</td>
+<td>555</td>
+</tr>
+<tr>
+<td>macro avg</td>
+<td>0.98</td>
+<td>0.53</td>
+<td>0.54</td>
+<td>555</td>
+</tr>
+<tr>
+<td>weighted avg</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>0.95</td>
+<td>555</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SVM:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>precision</th>
+<th>recall</th>
+<th>f1-score</th>
+<th>support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>536</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>19</td>
+</tr>
+<tr>
+<td>-----</td>
+<td>-----------</td>
+<td>--------</td>
+<td>----------</td>
+<td>---------</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td></td>
+<td></td>
+<td>0.97</td>
+<td>555</td>
+</tr>
+<tr>
+<td>macro avg</td>
+<td>0.48</td>
+<td>0.50</td>
+<td>0.49</td>
+<td>555</td>
+</tr>
+<tr>
+<td>weighted avg</td>
+<td>0.93</td>
+<td>0.97</td>
+<td>0.95</td>
+<td>555</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Random Forest:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>precision</th>
+<th>recall</th>
+<th>f1-score</th>
+<th>support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.98</td>
+<td>0.97</td>
+<td>0.98</td>
+<td>536</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.38</td>
+<td>0.47</td>
+<td>0.42</td>
+<td>19</td>
+</tr>
+<tr>
+<td>-----</td>
+<td>-----------</td>
+<td>--------</td>
+<td>----------</td>
+<td>---------</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td></td>
+<td></td>
+<td>0.95</td>
+<td>555</td>
+</tr>
+<tr>
+<td>macro avg</td>
+<td>0.68</td>
+<td>0.72</td>
+<td>0.70</td>
+<td>555</td>
+</tr>
+<tr>
+<td>weighted avg</td>
+<td>0.96</td>
+<td>0.95</td>
+<td>0.96</td>
+<td>555</td>
+</tr>
+</tbody>
+</table>
+<h2 id="analyse"><strong>Analyse</strong> </h2>
+<p>Basé sur le rapport de classification fourni, analysons les résultats pour chaque modèle :</p>
+<p><strong>Régression logistique :</strong></p>
+<ul>
+<li>La précision pour la classe 0 est de 0.97, ce qui indique que lorsque le modèle prédit la classe 0, il a raison 97 % du temps.</li>
+<li>Le rappel pour la classe 0 est de 1.00, ce qui signifie que le modèle identifie correctement toutes les instances de la classe 0.</li>
+<li>La précision pour la classe 1 est de 1.00, ce qui indique que lorsque le modèle prédit la classe 1, il a toujours raison. Cependant, le rappel pour la classe 1 n'est que de 0.05, ce qui signifie que le modèle n'est capable d'identifier que 5 % des instances réelles de la classe 1.</li>
+<li>La précision globale du modèle est de 0.97.</li>
+</ul>
+<p><strong>SVM :</strong></p>
+<ul>
+<li>La précision pour la classe 0 est de 0.97, ce qui indique que lorsque le modèle prédit la classe 0, il a raison 97 % du temps.</li>
+<li>Le rappel pour la classe 0 est de 1.00, ce qui signifie que le modèle identifie correctement toutes les instances de la classe 0.</li>
+<li>La précision et le rappel pour la classe 1 sont tous deux de 0.00, ce qui indique que le modèle échoue à prédire correctement les instances de la classe 1.</li>
+<li>La précision globale du modèle est de 0.97.</li>
+</ul>
+<p><strong>Random Forest :</strong></p>
+<ul>
+<li>La précision pour la classe 0 est de 0.98, ce qui indique que lorsque le modèle prédit la classe 0, il a raison 98 % du temps.</li>
+<li>Le rappel pour la classe 0 est de 0.97, ce qui signifie que le modèle identifie correctement 97 % des instances de la classe 0.</li>
+<li>La précision pour la classe 1 est de 0.38, ce qui indique que lorsque le modèle prédit la classe 1, il a raison 38 % du temps. Le rappel pour la classe 1 est de 0.47, ce qui signifie que le modèle est capable d'identifier 47 % des instances réelles de la classe 1.</li>
+<li>La précision globale du modèle est de 0.95.</li>
+</ul>
+<p>En résumé, les trois modèles fonctionnent bien pour identifier les instances de la classe 0, avec des scores de précision et de rappel élevés. Cependant, ils éprouvent des difficultés à identifier les instances de la classe 1, le modèle de régression logistique ayant le score de rappel le plus élevé de 0.05 parmi eux. Le modèle Random Forest a la meilleure équilibre entre précision et rappel pour la classe 1, avec des scores respectifs de 0.38 et 0.47. La précision globale est la plus élevée pour le modèle de régression logistique (0.97), suivi du modèle Random Forest (0.95) et du modèle SVM (0.97). Cependant, les scores de précision élevés sont principalement dus au jeu de données déséquilibré, où la classe 0 a significativement plus d'instances que la classe 1.</p>
+<h1 id="3-analyse-de-sentiment">3. Analyse de Sentiment </h1>
+<p>Nous allons réalisé une étude d'identification des sentiments des revues sur des restaurants.</p>
+<h2 id="eda-1">EDA </h2>
+<p>En analysant le fichier le nombre de review positive et négative est le meme 500 pour chaque.</p>
+<p>Plusieurs features seront ajoutés afin d'améliorer les predictions des modéles.</p>
+<ul>
+<li>
+<ol>
+<li><strong>Taille des reviews</strong> : D'après le diagramme en boîte, la longueur moyenne des commentaires Disliked se situe entre 30 et 80 caractères, pour les commentaire liked entre 30 et 70. Il y a plus de variabilité dans la longueur des commentaires liked que dans les commentaires Disliked. On peut également constater que les commentaires Disliked semble plus long.</li>
+</ol>
+</li>
+</ul>
+<p><img src="TPnote/TPnote/3-%20Restaurant/images/length%20by%20liked.png" alt="alt text"></p>
+<ul>
+<li>
+<ol start="2">
+<li><strong>nombre de mots</strong> : La médiane des commmentaires Disliked est plus levée que celle des commentaires aimé. Ce qui signifie que le nombre de mots est généralement plus grand lors des commentaire Disliked.<br>
+Il y a aussi  quelques commentaires Liked qui sont beaucoup plus longs que la plupart des autres commentaires.</li>
+</ol>
+</li>
+</ul>
+<p><img src="TPnote/TPnote/3-%20Restaurant/images/word%20count.png" alt="alt text"></p>
+<ul>
+<li>
+<ol start="3">
+<li><strong>Nombre de lettre en majiscule</strong><br>
+L'utilisation des majuscules est plus fréquente dans les commentaires "Disliked" que dans les commentaires "Liked".<br>
+Il y a quelques commentaires "Disliked" qui ont beaucoup plus de majuscules que la plupart des autres commentaires. Les majuscules sont souvent utilisées au début des phrases et des noms propres, et peuvent également être utilisées pour mettre l'accent sur certains mots ou phrases.</li>
+</ol>
+</li>
+</ul>
+<p><img src="TPnote/TPnote/3-%20Restaurant/images/upper%20case.png" alt="alt text"></p>
+<ul>
+<li>
+<ol start="4">
+<li><strong>La présence du mot not</strong><br>
+l'utilisation du mot "not" est plus élevé dans les commmentaires "Disliked". L'utilisation de la négation est souvent utilisé dans ces cas la.</li>
+</ol>
+</li>
+</ul>
+<p><img src="TPnote/TPnote/3-%20Restaurant/images/has%20not.png" alt="alt text"></p>
+<h2 id="modelisation">Modelisation </h2>
+<ul>
+<li>
+<p>Only Reviews</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Vectorizer</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logistic Regression</td>
+<td>vectorizer_BOW</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>Logistic Regression</td>
+<td>vectorizer_TF_IDF</td>
+<td>0.80</td>
+</tr>
+<tr>
+<td>Logistic Regression</td>
+<td>vectorizer_BOW_bigram</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>Logistic Regression</td>
+<td>vectorizer_TF_IDF_bigram</td>
+<td>0.79</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>vectorizer_BOW</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>vectorizer_TF_IDF</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>vectorizer_BOW_bigram</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>vectorizer_TF_IDF_bigram</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>vectorizer_BOW</td>
+<td>0.77</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>vectorizer_TF_IDF</td>
+<td>0.73</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>vectorizer_BOW_bigram</td>
+<td>0.76</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>vectorizer_TF_IDF_bigram</td>
+<td>0.73</td>
+</tr>
+</tbody>
+</table>
+<p>D'après les scores de précision fournis, le meilleur modèle parmi ceux testés semble être le modèle de régression logistique avec les vectoriseurs vectorizer_BOW (Bag-of-Words) et vectorizer_BOW_bigram (Bag-of-Words avec bigramme), atteignant tous deux une précision de 0,81. Ces modèles ont été constamment performants par rapport aux autres à travers différentes techniques de vectorisation.</p>
+<p>Les modèles SVM avec vectorizer_TF_IDF et vectorizer_TF_IDF_bigram ont également bien performé, atteignant une précision de 0,81, légèrement inférieure aux modèles de régression logistique les plus performants.</p>
+<p>Les modèles de forêt aléatoire ont montré des précisions plus faibles par rapport aux modèles de régression logistique et SVM avec toutes les techniques de vectorisation.</p>
+<p>Dans l'ensemble, basé uniquement sur la précision, les modèles de régression logistique avec la vectorisation Bag-of-Words et les caractéristiques de bigramme semblent être le meilleur choix parmi les modèles testés.</p>
+</li>
+<li>
+<p><strong>Features</strong></p>
+<ul>
+<li>
+<p>['Word_Count', 'Review_Length']</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logistic Regression</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>0.51</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>0.47</td>
+</tr>
+</tbody>
+</table>
+<p>À partir des résultats fournis, il est évident que le modèle de régression logistique a mieux performé parmi les modèles testés, avec une précision de 0.55. Le modèle SVM a atteint une précision de 0.51, tandis que le modèle de Forêt Aléatoire a eu la plus faible précision de 0.47.</p>
+</li>
+<li>
+<p>['Word_Count', 'Review_Length', 'Uppercase_Count']</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Modèle</th>
+<th>Précision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Régression Logistique</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>0.51</td>
+</tr>
+<tr>
+<td>Forêt Aléatoire</td>
+<td>0.47</td>
+</tr>
+</tbody>
+</table>
+<p>Les résultats restent similaires à ceux précédemment analysés, avec la régression logistique ayant la meilleure performance, suivie du SVM, puis de la forêt aléatoire.</p>
+<ul>
+<li>['Word_Count', 'Review_Length', 'Has_Not']</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Modèle</th>
+<th>Précision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Régression Logistique</td>
+<td>0.58</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>0.50</td>
+</tr>
+<tr>
+<td>Forêt Aléatoire</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+<p>Encore une fois, la régression logistique obtient la meilleure précision, suivie du SVM et de la forêt aléatoire, mais les différences de performances entre les modèles sont moins prononcées dans ce cas.</p>
+</li>
+<li>
+<p>Review + Word_Count</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Modèle</th>
+<th>Précision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Régression Logistique (BOW)</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>Régression Logistique (TF-IDF)</td>
+<td>0.77</td>
+</tr>
+<tr>
+<td>Régression Logistique (BOW bigram)</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>Régression Logistique (TF-IDF bigram)</td>
+<td>0.72</td>
+</tr>
+<tr>
+<td>SVM (BOW)</td>
+<td>0.59</td>
+</tr>
+<tr>
+<td>SVM (TF-IDF)</td>
+<td>0.51</td>
+</tr>
+<tr>
+<td>SVM (BOW bigram)</td>
+<td>0.61</td>
+</tr>
+<tr>
+<td>SVM (TF-IDF bigram)</td>
+<td>0.51</td>
+</tr>
+<tr>
+<td>Forêt Aléatoire (BOW)</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td>Forêt Aléatoire (TF-IDF)</td>
+<td>0.70</td>
+</tr>
+<tr>
+<td>Forêt Aléatoire (BOW bigram)</td>
+<td>0.77</td>
+</tr>
+<tr>
+<td>Forêt Aléatoire (TF-IDF bigram)</td>
+<td>0.70</td>
+</tr>
+</tbody>
+</table>
+<p>Une fois de plus, la régression logistique avec la vectorisation BOW bigram donne la meilleure précision, suivie de près par la régression logistique avec la vectorisation BOW et la forêt aléatoire avec la vectorisation BOW bigram. Les performances des modèles varient en fonction du type de vectorisation utilisé.</p>
+<ul>
+<li>
+<p>Usage of multiple Review</p>
+<ul>
+<li>
+<p>Bow for word and char</p>
+<ul>
+<li>Régression Logistique avec vectoriseur de mots et caractére : 0.77</li>
+<li>SVM avec vectoriseur de mots et caractére: 0.65</li>
+<li>Forêt Aléatoire avec vectoriseur de mots et caractére : 0.71</li>
+</ul>
+</li>
+<li>
+<p>Bow for word and char ngram(1,2) and ngram (1,5)</p>
+<ul>
+<li>Régression Logistique avec vectoriseur de mots : 0.85</li>
+<li>SVM avec vectoriseur de mots  : 0.72</li>
+<li>Forêt Aléatoire avec vectoriseur de mots  : 0.77</li>
+</ul>
+</li>
+<li>
+<p>Bow for word and char ngram(1,2) and ngram (2,5)</p>
+<ul>
+<li>Régression Logistique avec vectoriseur de mots : 0.84</li>
+<li>SVM avec vectoriseur de mots  : 0.71</li>
+<li>Forêt Aléatoire avec vectoriseur de mots  : 0.80</li>
+</ul>
+</li>
+</ul>
+<p>Les performances des modèles avec des n-grammes de taille plus grande (par exemple, (1,5)) sont meilleures que celles avec des n-grammes plus petits (par exemple, (1,2)). Cela indique que la prise en compte de séquences de mots plus longues peut capturer des informations plus riches et conduire à de meilleures prédictions.</p>
+<p>La régression logistique semble être le modèle le plus performant dans la plupart des cas, suivie de la forêt aléatoire. Le SVM obtient généralement les performances les plus faibles, bien qu'il puisse être sensible aux réglages des hyperparamètres.</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion: </h2>
+<p>La régression logistique s'est avérée être le choix le plus fiable parmi les modèles testés, offrant des performances solides et cohérentes sur une variété de techniques de vectorisation et de caractéristiques. L'utilisation de bigrammes a amélioré la précision des prédictions. L'esnsemble des feature ajoutés n'a fait que rajouté du bruit et complexifier le modéle.</p>
+<h1 id="4-covid">4. Covid </h1>
+<p>Dans ce derniere exercice nous allons travailler sur un DataSet du covid 19.</p>
+<p>Le jeu de données brut contient un vaste nombre d'informations relatives aux patients anonymisés, y compris les préconditions. Le jeu de données brut comprend 21 caractéristiques différentes et 1 048 576 patients uniques. Dans les caractéristiques booléennes, 1 signifie "oui" et 2 signifie "non". Les valeurs 97 et 99 sont des données manquantes.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description (French)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MEDICAL_UNIT</td>
+<td>Type d'institution du système national de santé ayant fourni les soins.</td>
+</tr>
+<tr>
+<td>SEX</td>
+<td>1 - féminin. 2 - masculin</td>
+</tr>
+<tr>
+<td>PATIENT_TYPE</td>
+<td>Type de soin reçu par le patient dans l'unité. 1 pour un retour à domicile et 2 pour une hospitalisation.</td>
+</tr>
+<tr>
+<td>DATE_DIED</td>
+<td>Si le patient est décédé, indique la date de décès, et 9999-99-99 sinon.</td>
+</tr>
+<tr>
+<td>INTUBED</td>
+<td>Indique si le patient était relié au ventilateur.</td>
+</tr>
+<tr>
+<td>PNEUMONIA</td>
+<td>Indique si le patient a déjà une inflammation des sacs aériens ou non.</td>
+</tr>
+<tr>
+<td>AGE</td>
+<td>Âge du patient.</td>
+</tr>
+<tr>
+<td>PREGNANT</td>
+<td>Indique si le patient est enceinte ou non.</td>
+</tr>
+<tr>
+<td>DIABETES</td>
+<td>Indique si le patient est diabétique ou non.</td>
+</tr>
+<tr>
+<td>COPD</td>
+<td>Indique si le patient est atteint de bronchopneumopathie chronique obstructive ou non.</td>
+</tr>
+<tr>
+<td>ASTHMA</td>
+<td>Indique si le patient est asthmatique ou non.</td>
+</tr>
+<tr>
+<td>INMSUPR</td>
+<td>Indique si le patient est immunodéprimé ou non.</td>
+</tr>
+<tr>
+<td>HIPERTENSION</td>
+<td>Indique si le patient est hypertendu ou non.</td>
+</tr>
+<tr>
+<td>OTHER_DISEASE</td>
+<td>Indique si le patient a une autre maladie ou non.</td>
+</tr>
+<tr>
+<td>CARDIOVASCULAR</td>
+<td>Indique si le patient a une maladie cardiaque ou vasculaire.</td>
+</tr>
+<tr>
+<td>OBESITY</td>
+<td>Indique si le patient est obèse ou non.</td>
+</tr>
+<tr>
+<td>RENAL_CHRONIC</td>
+<td>Indique si le patient souffre d'insuffisance rénale chronique ou non.</td>
+</tr>
+<tr>
+<td>TOBACCO</td>
+<td>Indique si le patient est un utilisateur de tabac.</td>
+</tr>
+<tr>
+<td>CLASIFFICATION_FINAL</td>
+<td>Résultats du test Covid. Voir la description des données.</td>
+</tr>
+<tr>
+<td>ICU</td>
+<td>Indique si le patient a été admis en unité de soins intensifs.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="traitement-des-données">Traitement des données </h2>
+<p>Nous allons commencé par traité les données manquentes ainsi que la création d'une colonne a prédire "DEAD".</p>
+<ul>
+<li><strong>Données Manquantes</strong>
+<ul>
+<li>
+<p>On va commencé par voir les valeurs uniques de chaque colonne.<br>
+On peut on déduire que pour cetrtaine colonne  dans les quelles on expecte avoir uniquement 2 valeurs, on retrouve 3 à 4 comme  par exemple PNEUMONIA, TABACO. Pour palier a cela nous allons garder uniquement les lignes avec les valeurs 1 et 2.</p>
+</li>
+<li>
+<p>On analysant le compte de chaque valeur unique, on remarque que les variables ICU, PREGNANT et INTUBED présente plusieurs valeurs unique. On décidras de ce passer de ces dérniéres.</p>
+<p><img src="TPnote/TPnote/4-%20Covid/images/icu%20droped.png" alt="alt text"></p>
+<p><img src="TPnote/TPnote/4-%20Covid/images/intubed%20droped.png" alt="alt text"></p>
+<p><img src="TPnote/TPnote/4-%20Covid/images/pregnant%20droped.png" alt="alt text"></p>
+</li>
+<li>
+<p>La colonne "DATE_DIED" posséde des dates réel  ou la personne est morte, ainsi que la valeur 9999-99-99, dans ce cas la la personne a survécu. Une colonne 2 DEAD est crée, 2 pour les personne ayant survécu et 1 une personne morte.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-visualisation">Data Visualisation </h2>
+<p>Nous allons analyser nos données grace des graphe de distribution.</p>
+<ul>
+<li>Distribution de la variable DEAD et le sex de la personne : on remarque que plus d'homme sont mort que de femme.</li>
+</ul>
+<p><img src="TPnote/TPnote/4-%20Covid/images/dead%20vs%20sex.png" alt="alt text"></p>
+<ul>
+<li>Distribution de la variable DEAD et l'age: Avec l'augmentation de l'age, on remarque plus de personne mourante.</li>
+</ul>
+<p><img src="TPnote/TPnote/4-%20Covid/images/dead%20vs%20alive.png" alt="alt text"></p>
+<ul>
+<li>Distribution de la variable DEAD et PNEUMONIA : on remarque que les personne ayant une pnomie sont plus susceptible de mourir.</li>
+</ul>
+<p><img src="TPnote/TPnote/4-%20Covid/images/dead%20vs%20pneumonia.png" alt="alt text"></p>
+<h2 id="modelisation-1">Modelisation. </h2>
+<p>On commencera par analyser la matrice de confusion, afin d'obtenir les variables les plus snignificatif.<br>
+Les varible qui n'aposte rien sont : "SEX","COPD","ASTHMA","INMSUPR", "OTHER_DISEASE","CARDIOVASCULAR","OBESITY","TOBACCO".</p>
+<ul>
+<li>
+<p>Used models : Logistic Regression, Decision Tree and  Random Forest</p>
+<ul>
+<li>
+<p>All features</p>
+<ul>
+<li>Logistic Regression: 0.9346</li>
+<li>Decision Tree: 0.9323</li>
+<li>Random Forest: 0.9326</li>
+</ul>
+</li>
+<li>
+<p>Feature Set 1: ["AGE", "PATIENT_TYPE", "PNEUMONIA"]</p>
+<ul>
+<li>Logistic Regression: 0.9337</li>
+<li>Decision Tree: 0.9338</li>
+<li>Random Forest: 0.9338</li>
+</ul>
+</li>
+<li>
+<p>Feature Set 2: ["AGE", "PATIENT_TYPE", "HIPERTENSION", "PNEUMONIA", "DIABETES"]</p>
+<ul>
+<li>Logistic Regression: 0.9338</li>
+<li>Decision Tree: 0.9337</li>
+<li>Random Forest: 0.9339</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Dans l'ensemble, tous les modèles ont obtenu des précisions similaires, allant d'environ 93,37 % à 93,39 %. Cela suggère que le choix de l'ensemble de fonctionnalités n'a pas d'impact significatif sur les performances des modèles. Cependant, il est important de noter que les précisions sont relativement élevées, ce qui indique que les modèles se comportent bien dans la prédiction de la variable cible.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
